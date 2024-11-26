@@ -11,24 +11,24 @@ export default async function Page({
   }: {
     params: Promise<{ slug: string }>
   }) {
-    const slug = (await params).slug
-    
-    // Read markdown file from the file system
-    const filePath = path.join(process.cwd(), 'pages', `${slug.join('/')}.mdx`)
-    let content = `# [CitizenLab](https://www.citizenlab.co)`
-    let contentworks =  `hello world`
+
+    let markdown = ''
     try {
-      // content = await fs.readFile(filePath, 'utf8')
+      const slug = (await params).slug
+    
+      // Read markdown file from the file system
+      const filePath = path.join(process.cwd(), 'pages', `${slug.join('/')}.mdx`)
+  
+       markdown = await fs.readFile(filePath, 'utf8')
     } catch (error) {
       console.error('Error reading file:', error)
-      content = 'Error loading content'
     }
 
     return (
       <div>
         <div style={{border: '1px solid black'}}>
           <Suspense fallback={<div>Loading editor...</div>}>
-            <EditorComp markdown={contentworks} />
+            <EditorComp markdown={markdown} />
           </Suspense>
         </div>
       </div>

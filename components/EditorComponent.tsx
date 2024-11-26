@@ -1,7 +1,7 @@
 
 "use client";
 
-import { MDXEditor, MDXEditorMethods, headingsPlugin } from "@mdxeditor/editor";
+import { MDXEditor, MDXEditorMethods, headingsPlugin, linkPlugin } from "@mdxeditor/editor";
 import { FC } from "react";
 
 export interface EditorProps {
@@ -21,7 +21,7 @@ const Editor: FC<EditorProps> = ({ markdown, editorRef }) => {
       onChange={(e) => console.log(e)}
       ref={editorRef}
       markdown={markdown}
-      plugins={[headingsPlugin()]}
+      plugins={[headingsPlugin(), linkPlugin()]}
     />
   );
 };
