@@ -12,14 +12,14 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/SocialResonance/wiki-next',
   },
   footer: {
-    text: 'Resonance Wiki',
+    content: 'Resonance Wiki',
   },
   feedback: {
     content: 'Ideas?',
     useLink: () => 'https://pol.is'
   },
   editLink: {
-    text: 'Edit this page',
+    content: 'Edit this page',
     component: ({ filePath }) => {
       const href = `https://github.com/your-repo/edit/main/${filePath}`
       return <a href={href}>Edit this page!!!</a>

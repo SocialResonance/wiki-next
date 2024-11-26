@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "clean": "rm -rf .next && rm -rf node_modules && rm -rf package-lock.json"
+    "clean": "rm -rf .next && rm -rf node_modules && rm -rf pnpm-lock.yaml"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
     "next": "^13.0.6",
-    "nextra": "latest",
-    "nextra-theme-docs": "latest",
+    "nextra": "^3.2.4",
+    "nextra-theme-docs": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

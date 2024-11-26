@@ -1,10 +1,10 @@
 export default {
-  logo: <span>Plurality</span>,
+  logo: <span>Resonance Wiki</span>,
   project: {
-    link: 'https://github.com/yourusername/plurality'
+    link: 'https://github.com/SocialResonance/wiki-next'
   },
-  docsRepositoryBase: 'https://github.com/yourusername/plurality/tree/main',
+  docsRepositoryBase: 'https://github.com/SocialResonance/wiki-next/tree/main',
   footer: {
-    text: 'Plurality Documentation'
+    text: 'Mind Foundation'
   }
 } 
