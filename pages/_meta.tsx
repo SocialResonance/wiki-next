@@ -2,6 +2,7 @@ export default {
   "index": "Introduction",
   "bewusstseinskultur": "Bewusstseinskultur",
   "plurality": "Plurality",
+  "research": "Research",
   "about": {
     "title": "About",
     "type": "page"
