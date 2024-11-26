@@ -17,7 +17,7 @@ export default async function Page({
       const slug = (await params).slug
     
       // Read markdown file from the file system
-      const filePath = path.join(process.cwd(), 'pages', `${slug.join('/')}.mdx`)
+      const filePath = path.join(process.cwd(), 'pages', `${slug.join('/')}`)
   
        markdown = await fs.readFile(filePath, 'utf8')
     } catch (error) {
