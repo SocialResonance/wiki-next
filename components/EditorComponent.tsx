@@ -1,8 +1,9 @@
 
 "use client";
 
-import { MDXEditor, MDXEditorMethods, headingsPlugin, linkPlugin } from "@mdxeditor/editor";
+import { MDXEditor, MDXEditorMethods, headingsPlugin,toolbarPlugin, BoldItalicUnderlineToggles,linkPlugin, UndoRedo } from "@mdxeditor/editor";
 import { FC } from "react";
+import '@mdxeditor/editor/style.css'
 
 export interface EditorProps {
   markdown: string;
@@ -21,7 +22,17 @@ const Editor: FC<EditorProps> = ({ markdown, editorRef }) => {
       onChange={(e) => console.log(e)}
       ref={editorRef}
       markdown={markdown}
-      plugins={[headingsPlugin(), linkPlugin()]}
+      plugins={[headingsPlugin(), linkPlugin(), toolbarPlugin({
+        toolbarClassName: 'my-classname',
+        toolbarContents: () => (
+          <>
+            {' '}
+            <UndoRedo />
+            <BoldItalicUnderlineToggles />
+          </>
+        )
+      })
+]}
     />
   );
 };
