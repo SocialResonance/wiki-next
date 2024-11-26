@@ -6,6 +6,7 @@ find . -name "*.mdx" -not -path "*/node_modules/*" | while read -r file; do
     
     # Create temporary files
     temp_file=$(mktemp)
+    final_file=$(mktemp)
     
     # Check if file has frontmatter
     if grep -q "^---$" "$file"; then
@@ -13,27 +14,27 @@ find . -name "*.mdx" -not -path "*/node_modules/*" | while read -r file; do
         title=$(grep 'title:' "$file" | sed 's/title: "\(.*\)"/\1/')
         link=$(grep 'link:' "$file" | sed 's/link: "\(.*\)"/\1/')
         
-        # Check if file already has the header format
-        if grep -q "^# \[.*\](@.*)" "$file"; then
-            # If header exists, just remove frontmatter
-            sed '1,/^---$/!b;{/^---$/!d}' "$file" | sed '1,/^---$/d' > "$temp_file"
-            cat "$temp_file" > "$file"
+        # Save the content after frontmatter (everything after the second ---)
+        awk '/^---$/ { if (++count == 2) { save=1; next } } save { print }' "$file" > "$temp_file"
+        
+        # Remove any existing headers that match our patterns
+        sed -E '/^# \[.*\](@.*)/d' "$temp_file" | sed -E '/^# \[.*\]\(.*\)/d' > "$final_file"
+        
+        # Add new header and content
+        if [ ! -z "$title" ] && [ ! -z "$link" ]; then
+            {
+                echo "# [$title](@$link)"
+                echo
+                cat "$final_file"
+            } > "$file"
         else
-            # If header doesn't exist and we have title/link
-            if [ ! -z "$title" ] && [ ! -z "$link" ]; then
-                # Remove frontmatter and add new header
-                sed '1,/^---$/!b;{/^---$/!d}' "$file" | sed '1,/^---$/d' > "$temp_file"
-                {
-                    echo "# [$title](@$link)"
-                    echo
-                    cat "$temp_file"
-                } > "$file"
-            fi
+            cat "$final_file" > "$file"
         fi
     fi
     
     # Clean up
     rm "$temp_file"
+    rm "$final_file"
     
     echo "Updated $file"
 done
