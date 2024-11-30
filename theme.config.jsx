@@ -1,3 +1,5 @@
+import process from 'process';
+
 export default {
   logo: <span>Resonance Wiki</span>,
   project: {
@@ -16,7 +18,7 @@ export default {
     component: ({ filePath }) => {
         const editSlug = filePath.replace('pages/', 'edit/');
 
-      const href = `http://localhost:3000/${editSlug}`
+      const href = `${process.env.WEBSITE_URL}/${editSlug}`
       return <a href={href}>Edit this pagasdfe!!!!</a>
     }
   }
