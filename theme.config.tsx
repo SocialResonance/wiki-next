@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import process from 'process';
 
 const config: DocsThemeConfig = {
   logo: <span>Resonance Wiki</span>,
@@ -20,11 +21,12 @@ const config: DocsThemeConfig = {
   },
   editLink: {
     content: 'Edit this page',
-    component: ({ filePath }) => {
-      const href = `https://github.com/your-repo/edit/main/${filePath}`
-      return <a href={href}>Edit this page!!!</a>
+    component: ({filePath}) => {
+      if (!filePath) return <span>Edit not available</span>
+      const slug = filePath.replace('pages/', '')
+      const href = `${process.env.WEBSITE_URL}/edit/${slug}`
+      return <a data-cy={`edit-link-${slug}`} href={href}>Edit this page</a>
     }
-  }
+  },
 }
-
 export default config
