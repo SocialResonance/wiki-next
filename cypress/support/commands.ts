@@ -1,37 +1,24 @@
 /// <reference types="cypress" />
-// ***********************************************
-// This example commands.ts shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-//
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+
+// Add custom command to log in to GitHub
+Cypress.Commands.add('loginToGithub', () => {
+  const username = Cypress.env('GITHUB_USERNAME');
+  const password = Cypress.env('GITHUB_PASSWORD');
+
+  // Use cy.origin to handle cross-origin login
+  cy.origin('https://github.com', { args: { username, password } }, ({ username, password }) => {
+    cy.visit('/login');
+    cy.get('input[name="login"]').type(username);
+    cy.get('input[name="password"]').type(password, { log: false });
+    cy.get('input[name="commit"]').click();
+  });
+});
+
+// Extend Cypress Chainable interface to include the loginToGithub command
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      loginToGithub(): Chainable<void>;
+    }
+  }
+}

@@ -6,7 +6,8 @@
     "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start",
-    "clean": "rm -rf .next && rm -rf node_modules && rm -rf pnpm-lock.yaml"
+    "clean": "rm -rf .next && rm -rf node_modules && rm -rf pnpm-lock.yaml",
+    "aider": "aider --model o1-preview --architect --editor-model anthropic/claude-3-5-sonnet-20241022"
   },
   "repository": {
     "type": "git",

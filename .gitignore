@@ -7,3 +7,4 @@ node_modules
 .aider.input.history
 /.idea
 .idea/workspace.xml
+cypress.env.json
