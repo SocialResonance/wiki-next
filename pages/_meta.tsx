@@ -1,6 +1,5 @@
 export default {
-  "index": "Introduction",
-  "welcome": "Welcome",
+  "index": "Welcome",
   "theses": "Theses",
   "resonance": "Resonace",
   "bewusstseinskultur": "Bewusstseinskultur",
