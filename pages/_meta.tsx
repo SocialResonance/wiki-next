@@ -1,5 +1,5 @@
 export default {
-  "welcome": "Welcome",
+  "index": "Welcome",
   "theses": "Theses",
   "bewusstseinskultur": "Bewusstseinskultur",
   "plurality": "Plurality",
