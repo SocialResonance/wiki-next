@@ -17,7 +17,7 @@ export default {
         const editSlug = filePath.replace('pages/', 'edit/');
 
       const href = `http://localhost:3000/${editSlug}`
-      return <a href={href}>Edit this pagasdfe!!!!</a>
+      return <a href={href}>Edit this page</a>
     }
   }
 } 
