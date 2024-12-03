@@ -1,5 +1,5 @@
 export default {
-  "theory": "Theory"
+  "theory": "Theory",
   "tech": "Methods/Technology",
   "organizations": "Organizations",
   "events": "Events",
