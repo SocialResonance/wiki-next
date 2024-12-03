@@ -9,12 +9,12 @@ const EditorComp = dynamic<EditorProps>(() => import('../../../components/Editor
 export default async function Page({
     params,
   }: {
-    params: Promise<{ slug: string }>
+    params: { slug: string[] }
   }) {
 
     let markdown = ''
     try {
-      const slug = (await params).slug
+      const slug = params.slug
     
       // Read markdown file from the file system
       const filePath = path.join(process.cwd(), 'pages', `${slug.join('/')}`)
