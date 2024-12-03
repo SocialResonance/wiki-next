@@ -1,5 +1,6 @@
 export default {
   "index": "Introduction",
+  "introduction": "Introduction",
   "bewusstseinskultur": "Bewusstseinskultur",
   "plurality": "Plurality",
   "research": "Research",
