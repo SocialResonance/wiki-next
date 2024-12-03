@@ -1,7 +1,8 @@
-{
+export default {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "bewusstseinskultur": "Bewusstseinskultur",
+  "plurality": "Plurality",
+  "research": "Research",
   "about": {
     "title": "About",
     "type": "page"
