@@ -4,6 +4,7 @@ export default {
   "bewusstseinskultur": "Bewusstseinskultur",
   "plurality": "Plurality",
   "research": "Research",
+  "section": "Section",
   "about": {
     "title": "About",
     "type": "page"
