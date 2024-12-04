@@ -5,6 +5,7 @@ export default {
   "plurality": "Plurality",
   "research": "Research",
   "section": "Section",
+  "fundamentals": "Fundamentals",
   "about": {
     "title": "About",
     "type": "page"
