@@ -2,6 +2,6 @@ export default {
   "theory": "Theory",
   "tech": "Methods/Technology",
   "organizations": "Organizations",
-    "places": "Places",
+  "places": "Places",
   "events": "Events",
   } 
