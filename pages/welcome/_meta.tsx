@@ -1,4 +1,4 @@
-export default {
-  "mission": "Mission",
-  "theses": "Theses",
-} 
+// export default {
+//   "mission": "Mission",
+//   "theses": "Theses",
+// } 
