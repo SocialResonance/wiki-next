@@ -1,10 +1,11 @@
 export default {
   "index": "Welcome",
-  "theses": "Theses",
-  "resonance": "Resonace",
+  "resonance": "Resonance",
   "bewusstseinskultur": "Bewusstseinskultur",
   "plurality": "Plurality",
   "research": "Research",
+  "section": "Section",
+  "fundamentals": "Fundamentals",
   "about": {
     "title": "About",
     "type": "page"
