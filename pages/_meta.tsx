@@ -1,6 +1,6 @@
 export default {
   "index": "Welcome",
-  "reading_group": "Reading Group",
+  "reading-group": "Reading Group",
   "resonance": "Resonance",
   "bewusstseinskultur": "Bewusstseinskultur",
   "plurality": "Plurality",
