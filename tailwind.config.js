@@ -8,7 +8,11 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx,md,mdx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      fontSize: {
+        base: '1.125rem', // 18px instead of default 16px
+      },
+    }
   },
   plugins: []
 }

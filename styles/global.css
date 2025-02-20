@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-base;
+  }
+  
+  body {
+    @apply text-base leading-relaxed;
+  }
+}
