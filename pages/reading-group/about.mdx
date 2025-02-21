@@ -1,14 +1,29 @@
 import Image from 'next/image'
 
-<Image
-className='pb-10'
-  src="/images/title-5.png"
-  alt="Title 2"
-  width={800}
-  height={400}
-  priority
-  style={{ backgroundColor: 'transparent' }}
-/>
+
+<div className="relative pb-10">
+
+
+  <Image
+    className="block dark:hidden"
+    src="/images/title-5.png"
+    alt="Title 2 - Light Mode"
+    width={800}
+    height={400}
+    priority
+    style={{ backgroundColor: 'transparent' }}
+  />
+  <Image
+    className="hidden dark:hidden"
+    src="/images/systemic-leaves-dark.png"
+    alt="Title 2 - Dark Mode"
+    width={800}
+    height={400}
+    priority
+    style={{ backgroundColor: 'transparent' }}
+  />
+
+</div>
 
 The Reading Group is a regular event of the Resonance Section of the MIND Foundation. 
 
