@@ -8,7 +8,7 @@ import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
  
  
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+const banner = <Banner storageKey="some-key">Social Resonance Wiki</Banner>
 
 export const metadata = {
   // ... your metadata API
