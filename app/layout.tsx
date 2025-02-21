@@ -27,7 +27,7 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en" className={encodeSansCondensed.variable}>
-                <header>
+        <header>
           <Search />
         </header>
         <body className={encodeSansCondensed.className}>{children}</body>
