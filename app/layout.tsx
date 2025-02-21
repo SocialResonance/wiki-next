@@ -1,7 +1,16 @@
 import { Search } from 'nextra/components'
 
 import { Encode_Sans_Condensed } from 'next/font/google'
-
+import { Footer, Layout, Navbar } from 'nextra-theme-docs'
+import { Banner, Head } from 'nextra/components'
+import { getPageMap } from 'nextra/page-map'
+// Required for theme styles, previously was imported under the hood
+import 'nextra-theme-docs/style.css'
+ 
+export const metadata = {
+  // ... your metadata API
+  // https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+}
 const encodeSansCondensed = Encode_Sans_Condensed({
   subsets: ['latin'],
   weight: ['400', '700'],

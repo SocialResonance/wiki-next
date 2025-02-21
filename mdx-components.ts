@@ -1,12 +1,8 @@
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
- 
-// Get the default MDX components
-const themeComponents = getThemeComponents()
- 
-// Merge components
-export function useMDXComponents(components) {
-  return {
-    ...themeComponents,
-    ...components
-  }
-}
+
+const docsComponents = getDocsMDXComponents()
+
+export const useMDXComponents: typeof getDocsMDXComponents = components => ({
+  ...docsComponents,
+  ...components
+})
