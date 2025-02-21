@@ -1,8 +1,11 @@
 import { useConfig } from 'nextra-theme-docs'
 
 export default function ArticleLayout({ children }) {
-  const { frontMatter } = useConfig()
-  const { title, link, source } = frontMatter
+  const { 
+    title = '', 
+    link = '', 
+    source = '' 
+  } = useConfig().normalizePagesResult.activeMetadata ?? {}
 
   return (
     <div className="flex justify-center items-center">
