@@ -50,12 +50,12 @@ export default async function RootLayout({
           navbar={
             <Navbar
               logo={<h1 className="text-2xl">Nextra</h1>}
-              projectLink="https://github.com/officialrajdeepsingh/nextra-4"
+              projectLink="https://github.com/SocialResonance/wiki-next"
             />
           }
           search={<Search placeholder="Search..." />}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/officialrajdeepsingh/nextra-4/tree/main/docs"
+          docsRepositoryBase="https://github.com/SocialResonance/wiki-next"
           editLink="Edit this page on GitHub"
           sidebar={{ defaultMenuCollapseLevel: 1, autoCollapse: true }}
           footer={footer}
