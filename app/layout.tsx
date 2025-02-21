@@ -22,7 +22,6 @@ const encodeSansCondensed = Encode_Sans_Condensed({
 })
 
 const footer = <Footer>{new Date().getFullYear()} © Dimitri Postolov.</Footer>
-const navbar = <Navbar logo={<b>Nextra</b>} projectLink="https://github.com/shuding/nextra" />
 
 export default async function RootLayout({
     // Layouts must accept a children prop.
@@ -45,18 +44,16 @@ export default async function RootLayout({
       >
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
-        <header>
-          <Search />
-        </header>
         <body>
         <Layout
           banner={banner}
           navbar={
             <Navbar
-              logo={<h1 className="text-2xl"> Nextra</h1>}
+              logo={<h1 className="text-2xl">Nextra</h1>}
               projectLink="https://github.com/officialrajdeepsingh/nextra-4"
             />
           }
+          search={<Search placeholder="Search..." />}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/officialrajdeepsingh/nextra-4/tree/main/docs"
           editLink="Edit this page on GitHub"
