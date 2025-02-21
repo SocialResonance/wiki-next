@@ -1,3 +1,5 @@
+import { Search } from 'nextra/components'
+
 import { Encode_Sans_Condensed } from 'next/font/google'
 
 const encodeSansCondensed = Encode_Sans_Condensed({
@@ -16,6 +18,9 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en" className={encodeSansCondensed.variable}>
+                <header>
+          <Search />
+        </header>
         <body className={encodeSansCondensed.className}>{children}</body>
       </html>
     )
