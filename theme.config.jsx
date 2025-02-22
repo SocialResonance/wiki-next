@@ -29,5 +29,5 @@ export default {
   //     return <a href={href}>Edit this page</a>
   //   }
   // },
-  darkMode: false
+  // darkMode: false
 } 
