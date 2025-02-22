@@ -10,7 +10,7 @@ export default {
   // "fundamentals": "Fundamentals",
   "about": {
     "title": "About",
-    "type": "page"
+    "href": "/section/about",
   },
   // "contact": {
   //   "title": "Contact ↗",

@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        base: '1.25rem', // 18px instead of default 16px
+        base: '1.1rem', // 18px instead of default 16px
       },
       fontFamily: {
         'encode': ['var(--font-encode-sans-condensed)'],
