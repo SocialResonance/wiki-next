@@ -1,5 +1,14 @@
+
+const Logo = () => {
+  return (
+    <span>
+      Resonance Wiki 🚧
+    </span>
+  )
+}
+
 export default {
-  logo: <span>Resonance Wiki</span>,
+  logo: <Logo />,
   project: {
     link: 'https://github.com/SocialResonance/wiki-next'
   },
