@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
-    "clean": "rm -rf .next && rm -rf node_modules && rm -rf pnpm-lock.yaml"
+    "clean": "rm -rf .next && rm -rf node_modules && rm -rf pnpm-lock.yaml",
+    "reset": "pnpm clean && pnpm install"
   },
   "repository": {
     "type": "git",

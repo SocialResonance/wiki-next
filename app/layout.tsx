@@ -6,9 +6,11 @@ import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 // Required for theme styles, previously was imported under the hood
 import 'nextra-theme-docs/style.css'
+import Link from 'next/link'
  
  
 const banner = <Banner storageKey="some-key">Social Resonance Wiki</Banner>
+const Feedback = <Link href='https://pol.is/2pnjwerpr5' target='_blank' rel='noopener noreferrer'>Feedback</Link>
 
 export const metadata = {
   // ... your metadata API
@@ -57,6 +59,7 @@ export default async function RootLayout({
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/SocialResonance/wiki-next"
           editLink="Edit this page on GitHub"
+          feedback={{content: Feedback}}
           sidebar={{ defaultMenuCollapseLevel: 1, autoCollapse: true }}
           footer={footer}
         >
