@@ -2,6 +2,7 @@ export default {
   "index": "Welcome",
   "reading-group": "Reading Group",
   "section": "Resonance Section",
+  "hackathons": "Hackathons",
   // "resonance": "Resonance",
   // "bewusstseinskultur": "Bewusstseinskultur",
   // "plurality": "Plurality",
