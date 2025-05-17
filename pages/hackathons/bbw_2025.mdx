@@ -1,3 +1,28 @@
+import { useEffect } from 'react';
+import formbricks from "@formbricks/js";
+
+export function FormbricksForm() {
+  useEffect(() => {
+    // Only run on client side
+    if (typeof window !== "undefined") {
+      formbricks.setup({
+        environmentId: "cmas01oec0009kk01gcz2nzmd",
+        appUrl: "http://formbricks-kw04oow88ggwgsgosso448wg.188.245.189.116.sslip.io",
+      });
+      
+      // Let Formbricks handle survey display automatically
+      // No need to manually call showSurvey()
+    }
+  }, []);
+
+  return (
+    <div className="formbricks-container" style={{ minHeight: '400px', marginTop: '20px' }}>
+      {/* Formbricks will inject the form here when triggered by its own conditions */}
+      <p>Please fill out our registration form to join the hackathon.</p>
+    </div>
+  );
+}
+
 # BBW 2025 Hackathon
 
 ## Democracy, Meaning, & Technology: Vibe Coding for a Scalable Culture of Consciousness
@@ -47,9 +72,6 @@ The goal of the hackathon is to bring together different people interested in a 
 
 The MIND foundation is a Berlin-based non-profit science, therapy, and education organization with the mission to bring psychedelic therapy into public health care. The hackathon is facilitated by software engineer Bastin Jafari (background in philosophy and computer science, CTO buddyhelp.org) and social psychologist Dr. Till Kastendieck (HU Berlin), section organizers of the Resonance Section at the MIND Members Association.
 
-## Registration
-Coming soon.
-
 ## Location:
 MIND Foundation, In den Schreibfederhöfen (2nd backyard, Boxhagener Str. 78, 10245 Berlin. 
 
@@ -59,3 +81,8 @@ till.kastendieck@mind-members.org
 or 
 bastin.jafari@mind-members.org
 .
+
+<div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+  <a href="http://formbricks-kw04oow88ggwgsgosso448wg.188.245.189.116.sslip.io/s/cmas0zmm1000xkk0157evijh7" style={{ padding: '12px 24px', background: '#0066cc', color: 'white', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.2rem' }}>Register Here</a>
+</div>
+{/* <FormbricksForm /> */}
