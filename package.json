@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
+    "@formbricks/js": "^4.1.0",
     "@mdxeditor/editor": "^3.19.3",
     "next": "^13.5.7",
     "nextra": "^3.2.4",
