@@ -1,4 +1,4 @@
 export default {
   "index": "Overview",
-  "bbw_2025": "BBW 2025"
+  "bbw_2025": "RTD@BBW 2025"
 } 
