@@ -7,6 +7,7 @@ const config: DocsThemeConfig = {
     title: 'On this page!!!',
   },
   docsRepositoryBase: 'https://github.com/SocialResonance/wiki-next',
+  darkMode: true,
 
   project: {
     link: 'https://github.com/SocialResonance/wiki-next',
