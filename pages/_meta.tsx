@@ -3,6 +3,7 @@ export default {
   "reading-group": "Reading Group",
   "section": "Resonance Section",
   "hackathons": "Hackathons",
+  "workshops": "Workshops",
   // "resonance": "Resonance",
   // "bewusstseinskultur": "Bewusstseinskultur",
   // "plurality": "Plurality",
