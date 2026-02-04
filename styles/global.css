@@ -15,4 +15,18 @@
   h1, h2, h3, h4, h5, h6 {
     border-bottom: none !important;
   }
+
+  /* Custom dark mode colors */
+  :root {
+    --nextra-primary-hue: 212;
+    --nextra-primary-saturation: 100%;
+  }
+
+  .dark {
+    /* Dark navy blue background */
+    --nextra-primary-brightness: 45%;
+    --shiki-dark-bg: #000916;
+    --nextra-bg-color: #000916;
+    --nextra-bg-secondary-color: #001530;
+  }
 }
